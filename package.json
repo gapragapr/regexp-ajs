@@ -1,0 +1,29 @@
+{
+  "name": "regexp-ajs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gapragapr/regexp-ajs.git"
+  },
+  "author": "gapragapr",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gapragapr/regexp-ajs/issues"
+  },
+  "homepage": "https://github.com/gapragapr/regexp-ajs#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.3",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.5.1",
+    "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "core-js": "^3.21.1"
+  }
+}
