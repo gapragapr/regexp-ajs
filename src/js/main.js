@@ -4,22 +4,16 @@ export default class Validator{
     }
 
     validateUsername() {
-        if (/^[\d\-^!@#$%^&*()_]/.test(this.userName)) {
-          throw new Error('Имя не должно начинаться цифрами, символами подчёркивания или тире.');
-        }
-    
-        if (/[\d\-^!@#$%^&*()_]$/.test(this.userName)) {
-          throw new Error('Имя не должно заканчиваться цифрами, символами подчёркивания или тире.');
-        }
-    
-        if (/\d{4}/.test(this.userName)) {
-          throw new Error('Имя не должно содержать подряд более трёх цифр.');
-        }
-    
-        if (/[А-Яа-яЁё]/.test(this.userName)) {
-          throw new Error('Имя не должно содержать Кириллицы.');
-        }
-    
-        return this.userName;
+      const regEx = /^[a-zA-Z]+[\w-]+[a-zA-Z]$/;
+      const regEx2 = /\d{3}/;
+      if (!regEx.test(this.userName) || regEx2.test(this.userName)){
+        throw new Error('Invalid username')
       }
+
+      return true
+    }
 }
+
+
+const name = new Validator('qwety');
+name.validateUsername()
